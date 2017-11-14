@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="kbteam" label="Requested type" mandatory="true" max_length="40" name="u_requested_type" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="Subsurface" sequence="3" value="subsurface"/>
+                <element label="Knowledge Team" sequence="4" value="kbteam"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="kbteamcoach" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="HR Timewriting" sequence="0" value="hrtime"/>
+                <element label="HR Travek" sequence="1" value="hrtravel"/>
+                <element label="Facility Equipment" sequence="2" value="facilityeq"/>
+                <element label="Facility Service" sequence="3" value="facilityservice"/>
+                <element label="Legal Assistance" sequence="4" value="legalassistance"/>
+                <element label="Legal Litigation" sequence="5" value="legalilligal"/>
+                <element label="Subsurface Advice" sequence="6" value="subsurfaceadvice"/>
+                <element label="Subsurface Onsite" sequence="7" value="subsurfaceonsite"/>
+                <element label="Knowledge Coaching" sequence="8" value="kbteamcoach"/>
+                <element label="Knowledge Creation" sequence="9" value="kbteamservice"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
